@@ -1,0 +1,30 @@
+legend {
+	font-weight: bold;
+	font-style: italic;
+	font-size: 14px;
+	color: red;
+}
+
+table.tablaAA td input {
+	font-weight: bold;
+	font-size: 13px;
+	border-bottom: 2px solid gray;
+	font-style: italic;
+}
+
+table.tablaAA td {
+	text-align: center;
+	font-size: 13px;
+}
+
+table.tablaAA td label {
+    font-weight: bold;
+    font-size: 11pt;
+    width: 100%;
+    text-align: right;
+}
+
+.required {
+	background-color: F49797;
+	color: white;
+}

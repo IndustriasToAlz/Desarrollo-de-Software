@@ -1,0 +1,19 @@
+git log > commits.txt
+git status
+git add -A
+git commit -m ""
+git rm --cached commits.txt
+git checkout
+git reset
+--soft
+--mixed
+--hard
+git branch
+git merge
+
+git remote add primergit https://github.com/IndustriasToAlz/Git-Application.git
+
+git remote remove nombre repositorio
+
+git push primergit master
+git fetch

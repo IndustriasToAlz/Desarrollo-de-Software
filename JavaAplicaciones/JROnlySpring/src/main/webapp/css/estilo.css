@@ -1,0 +1,57 @@
+.encabezado {
+    color: rgb(66,132,255);
+    font-family: verdana;
+    font-size: 10pt;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.rowAmarillo {
+    background-color: rgb(255,255,181);
+    font-family: verdana;
+    font-size: 10pt; 
+    text-align: center;
+    font-weight: bold;
+    color: black;
+}
+
+.rowBlue {
+    background-color: rgb(99,206,255);
+    font-family: verdana;
+    font-size: 10pt; 
+    text-align: center;
+    font-weight: bold;
+    color: black;
+}
+
+.rowWhite {
+    background-color: White;
+    font-family: verdana;
+    font-size: 10pt;
+    text-align: center;
+    font-weight: bold;
+    color: black;
+}
+
+.etiquetas {
+    font-weight: bold;
+    font-size: 10pt;
+    color: White;
+}
+
+.derechos {
+    font-weight: inherit;
+    font-size: 8pt;
+    color: rgb(0,0,132);
+}
+
+.boton {
+    font-weight: bold;
+    font-size: 8pt;
+}
+
+th {
+	font-size: 12px;
+	font-weight: bold;
+}

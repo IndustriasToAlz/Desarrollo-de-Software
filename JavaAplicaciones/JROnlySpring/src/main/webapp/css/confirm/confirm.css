@@ -1,0 +1,52 @@
+/*
+	"@(#)MORSA(W: MDRN11433IV1:confirm.css::0:15/07/2011)"
+*/
+
+#confirm {display:none;}
+#alert {display:none;}
+#notifica {display:none;}
+#agregaArchivo {display:none;}
+#agregaArchivoOtro {display:none;}
+
+/* Overlay */
+#confirm-overlay {background-color:#eee; cursor:default;}
+
+/* Container */
+#confirm-container {height:160px; width:420px; font: 16px/22px 'Trebuchet MS', Verdana, Arial; text-align:left; background:#fff; border:2px solid #336699; z-index:-2;}
+#confirm-container .header { Font-family: Tahoma, Arial, Helvetica; height:30px; line-height:30px; width:100%; background:url(../../img/header.gif) repeat-x; color:#fff; font-weight:bold;}
+#confirm-container .header span {padding-left:8px;}
+#confirm-container .message {Font-family: Tahoma, Arial, Helvetica; color:#333; font-size:14px; margin:0; padding:12px 4px 12px 8px; text-align: center;}
+#confirm-container .buttons {line-height:26px; width:160px; float:right; padding:10px 8px 0;} 
+#confirm-container .buttons div {float:left; margin-left:-3px; width:77px; height:26px; color:#fff; font-weight:normal; text-align:center; background:url(../../img/botonAlerta.jpg) repeat-x; border:0px solid #336699; cursor:pointer;} 
+#confirm-container .buttonAlert div {float:center; margin-left:-3px; width:76px; height:26px; color:#fff; font-weight:normal; text-align:center; background:url(../../img/botonAlerta.jpg) repeat-x; border:0px solid #336699; cursor:pointer;} 
+#confirm-container a.modal-close,
+#confirm-container a.modal-close:link,
+#confirm-container a.modal-close:active,
+#confirm-container a.modal-close:visited {text-decoration:none; font-weight:bold; position:absolute; right:10px; top:2px; color:#fff;}
+#confirm-container a.modal-close:hover {color:#ccc;}
+#confirm-container-captura {height:280px; width:400px; font: 16px/22px 'Trebuchet MS', Verdana, Arial; text-align:left; background:#fff; border:2px solid #336699; z-index: -2;}
+#confirm-container-captura .header { Font-family: Tahoma, Arial, Helvetica; height:30px; line-height:30px; width:100%; background:url(../../img/header.gif) repeat-x; color:#fff; font-weight:bold;}
+#confirm-container-captura .header span {padding-left:8px;}
+#confirm-container-captura .message {Font-family: Tahoma, Arial, Helvetica; color:#333; font-size:14px; margin:0; padding:12px 4px 12px 8px; text-align: center;}
+#confirm-container-captura .buttons {line-height:26px; width:160px;padding:10px 8px 0;} 
+#confirm-container-captura .buttons div {float:center; float:left; margin-left:-10px; width:76px; height:26px; color:#fff; font-weight:normal; text-align:center; background:url(../../img/botonAlerta.jpg) repeat-x; border:0px solid #336699; cursor:pointer;} 
+#confirm-container-captura .buttonAlert div {float:rigth; margin-left:0px; width:76px; height:26px; color:#fff; font-weight:normal; text-align:center; background:url(../../img/botonAlerta.jpg) repeat-x; border:0px solid #336699; cursor:pointer;}
+#confirm-container-captura .buttonAlertl div {margin-left:0px; margin-right:-30px;width:76px; height:26px; color:#fff; font-weight:normal; text-align:center; background:url(../../img/botonAlerta.jpg) repeat-x; border:0px solid #336699; cursor:pointer;}
+#confirm-container-captura a.modal-close,
+#confirm-container-captura a.modal-close:link,
+#confirm-container-captura a.modal-close:active,
+#confirm-container-captura a.modal-close:visited {text-decoration:none; font-weight:bold; position:absolute; right:10px; top:2px; color:#fff;}
+#confirm-container-captura a.modal-close:hover {color:#ccc;}
+#confirm-container-confirmacion {height:260px; width:400px; font: 16px/22px 'Trebuchet MS', Verdana, Arial; text-align:center; background:#fff; border:2px solid #336699;}
+#confirm-container-confirmacion .header { Font-family: Tahoma, Arial, Helvetica; height:30px; line-height:30px; width:100%; background:url(../../img/header.gif) repeat-x; color:#fff; font-weight:bold;}
+#confirm-container-confirmacion .header span {padding-left:8px;}
+#confirm-container-confirmacion .message {Font-family: Tahoma, Arial, Helvetica; color:#333; font-size:14px; margin:0; padding:12px 4px 12px 8px; text-align: center;}
+#confirm-container-confirmacion .buttons {line-height:26px; width:160px;padding:10px 8px 0;} 
+#confirm-container-confirmacion .buttons div {float:left; margin-left:-10px; width:76px; height:26px; color:#fff; font-weight:normal; text-align:center; background:url(../../img/botonAlerta.jpg) repeat-x; border:0px solid #336699; cursor:pointer;} 
+#confirm-container-confirmacion .buttonAlert div {float:rigth; margin-left:0px; width:76px; height:26px; color:#fff; font-weight:normal; text-align:center; background:url(../../img/botonAlerta.jpg) repeat-x; border:0px solid #336699; cursor:pointer;}
+#confirm-container-confirmacion .buttonAlertl div {margin-left:0px; margin-right:-30px;width:76px; height:26px; color:#fff; font-weight:normal; text-align:center; background:url(../../img/botonAlerta.jpg) repeat-x; border:0px solid #336699; cursor:pointer;}
+#confirm-container-confirmacion a.modal-close,
+#confirm-container-confirmacion a.modal-close:link,
+#confirm-container-confirmacion a.modal-close:active,
+#confirm-container-confirmacion a.modal-close:visited {text-decoration:none; font-weight:bold; position:absolute; right:10px; top:2px; color:#fff;}
+#confirm-container-confirmacion a.modal-close:hover {color:#ccc;}

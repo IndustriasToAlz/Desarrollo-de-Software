@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	   		http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	   		http://www.springframework.org/schema/context
+	   		http://www.springframework.org/schema/context/spring-context-3.0.xsd
+			http://www.springframework.org/schema/mvc 
+			http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
+    <!-- Activates various annotations to be detected in bean classes -->
+    <context:annotation-config/>
+    <context:component-scan base-package="com.javarevolutions.spring"/>
+    <mvc:annotation-driven />
+
+    <import resource="tiles-context.xml"/>
+
+    <!-- Bean Para conexion a MySQL -->
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property value="com.mysql.jdbc.Driver" name="driverClassName"/>
+        <property value="jdbc:mysql://192.168.1.130:3306/javarevolutions" name="url"/>
+        <property value="jr" name="username"/>
+        <property value="admin" name="password"/>
+    </bean>
+
+    <!-- Bean Para conexion a Oracle
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property value="oracle.jdbc.driver.OracleDriver" name="driverClassName"/>
+        <property value="jdbc:oracle:thin:@localhost:1521:xe" name="url"/>
+        <property value="Java" name="username"/>
+        <property value="Revolutions" name="password"/>
+    </bean>
+    -->
+
+    <!-- <jee:jndi-lookup id="dataSource" jndi-name="jdbc/sat"/> -->
+    <!-- <bean id="txManager" class="org.springframework.transaction.jta.WebSphereUowTransactionManager"/> -->
+    <!-- <bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager"/> -->
+    <!-- <bean id="txManager" class="org.springframework.transaction.jta.JtaTransactionManager"/> -->
+    <bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+    <!-- OBTENER ARCHIVO DE PROPIEDADES propsBD.properties -->
+    <context:property-placeholder location="classpath:com/javarevolutions/spring/properties/propsBD.properties"/>
+
+    <!-- DAOS -->
+    <bean id="indexDAO" class="com.javarevolutions.spring.dao.impl.IndexDAOImpl">
+        <property name="dataSource" ref="dataSource"/>
+        <!-- Lee la propiedad schema del archivo propsBD.properties y la asigna a la variable esquema -->
+        <property name="esquema" value="${schema}"/>
+    </bean>
+    <bean id="clientesDAO" class="com.javarevolutions.spring.dao.impl.ClientesDAOImpl">
+        <property name="dataSource" ref="dataSource"/>
+        <!-- Lee la propiedad schema del archivo propsBD.properties y la asigna a la variable esquema -->
+        <property name="esquema" value="${schema}"/>
+    </bean>
+
+    <!-- SERVICIOS -->
+    <bean id="indexService" class="com.javarevolutions.spring.service.impl.IndexServiceImpl"></bean>
+    <bean id="clientesService" class="com.javarevolutions.spring.service.impl.ClientesServiceImpl"></bean>
+</beans>
