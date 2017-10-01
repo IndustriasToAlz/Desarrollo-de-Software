@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="vieport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Inicializacion</title>
+        <script>
+            document.addEventListener("DOMContentLoaded", inicializarAno)
+            
+            function inicializarAno(){
+               var ano = new Date().getFullYear();
+               document.getElementById('año').value = ano;
+
+               document.getElementById('año').addEventListener('click',cambiaEstilo)
+            }
+
+            function cambiaEstilo(){
+                document.getElementById('año').style.color = '#33CCCC';
+                document.getElementById('año').style.fontSize = '2em';
+            }
+
+        </script>
+    </head>
+    <body>
+        <h1>Load vs DOMContentLoaded</h1>
+
+        Año: <input type="text" id="año">
+            
+    </body>
+</html>

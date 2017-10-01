@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="vieport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>DOM</title>
+    </head>
+    <body>
+        <form action="http://localhost:8080/Taller_Spring_7/add.htm" id="f" name="elFormulario">
+            <label for="campo" id="etiqCampo">Campo de Texto:</label>
+            <input type="text" name="campo" size="40" id="txtCampo">
+        </form>
+
+        <script>
+            'use strict'
+
+            console.log(document.forms[0].action);
+            //document.forms[0].elements[0].value = 'oe';
+            //document.forms[0].campo.value = 'oe en el campo';
+            document.forms.elFormulario.campo.value = 'oe en el campo del formulario';
+
+            //document.getElementById('etiqCampo').textContent = 'aki!!';
+
+            document.getElementById('etiqCampo').addEventListener('click', cambiaFoco);
+
+            function cambiaFoco(){
+                //document.forms.elFormulario.campo.focus();  
+                document.getElementById('txtCampo').focus();
+            }
+
+            document.getElementById('txtCampo').addEventListener('keyup',function(){
+                //this -----> objeto sobre el cual se ha detectado el evento
+                console.log('Lo que hay escrito es ' + this.value);
+            })
+        </script>
+    </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="vieport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Inicializacion</title>
+        <script>
+            window.addEventListener("load", inicializar);
+            document.addEventListener("DOMContentLoaded", inicializarAno)
+            document.addEventListener("DOMContentLoaded", function(){
+                alert('hola mundo');
+            })
+
+            function inicializar(){
+                document.getElementById('parrafo1').style.color = 'red';
+            }
+
+            function inicializarAno(){
+               var ano = new Date().getFullYear();
+               document.getElementById('año').value = ano;
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Load vs DOMContentLoaded</h1>
+        <p id="parrafo1">El párrafo es la exposición coherente y por escrito de una idea completa. Es unidad de pensamiento y 
+            sentimiento, forma la unidad de expresión en el lenguaje escrito. Dicha unidad está integrada por dos elementos: 
+            el enunciado principal y los enunciados secundarios, los cuales complementan al principal.</p>
+
+        Año: <input type="text" id="año" >
+            
+    </body>
+</html>

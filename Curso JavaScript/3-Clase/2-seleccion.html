@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="vieport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>DOM</title>
+        <style>
+            li{
+                padding: 4px;
+            }
+
+            .item{
+                background-color: #000;
+            }
+
+            .itemgrande{
+                font-size: 1.4em;
+                font-family: sans-serif;
+                text-shadow: 2px 2px #aee;
+                font-weight: bold;
+                padding: 10px;
+                margin: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <p id="parrafo1">El próximo domingo, los ciudadanos tendrán ocasión de hacer política, de participar en la toma de 
+            decisiones públicas, cuando depositen su voto para elegir a 194 diputados de mayoría y tal vez cincuenta de partido. 
+            La democracia electoral les permite, de ese modo ejercer  funciones de gobierno.</p>
+        <p class="item">Pero ¿de verdad es así? La respuesta tiene que ser negativa. La política no se hace en las urnas. 
+            El sistema de partido hegemónico que impera en México desde 1929 determina que la verdadera elección de diputados 
+            haya ocurrido en febrero, probablemente cuando los diversos intereses que es aglutinan en el PRI acordaron las 
+            candidaturas, en un proceso que sólo es formalmente interior, pero que por la naturaleza del partido es el que 
+            verdaderamente decide la composición de la Cámara.</p>
+        <ul>
+            <li class="item">Item 1</li>
+            <li>Item 2</li>
+            <li class="item">Item 3</li>
+            <li class="item">Item 4</li>
+        </ul>
+
+        <button id="cambiaClase">Cambia elementos de la clase item</button>
+        <button id="cambiarLi">Cambia Todos los Elementos</button>
+        <button id="verParrafos">Ver parrafos</button>
+        <button id="anadirParrafo">Añadir Parrafo</button>
+
+        <script src="./seleccion.js"></script>
+    </body>
+</html>
