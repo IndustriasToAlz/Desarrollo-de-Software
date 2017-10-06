@@ -1,0 +1,36 @@
+body{
+    font-family: sans-serif;
+    margin-bottom: 40px;
+    height: 1500px
+}
+
+.button{
+    margin-top: 1400px;
+
+}
+
+.content{
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.ocultar{
+    display: none;
+}
+
+.saludo{
+    background-color: red;
+    font-family: sans-serif;
+    padding : 10px;
+    border-radius : 6px;
+    margin-left : 15px;
+    cursor : pointer;
+}
+
+.cubo{
+    position: absolute;
+    background-color: black;
+    width: 50px;
+    height: 50px;
+    margin-top: 5%;
+}
