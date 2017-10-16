@@ -1,0 +1,77 @@
+body, html{
+    font-family: sans-serif;
+    margin-bottom: 40px;
+    height: 1500px;
+    text-align: center;
+    background-color: #eee;
+    margin: 0px;
+}
+
+.button{
+    margin-top: 1400px;
+
+}
+
+.content{
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.ocultar{
+    display: none;
+}
+
+.saludo{
+    background-color: red;
+    font-family: sans-serif;
+    padding : 10px;
+    border-radius : 6px;
+    margin-left : 15px;
+    cursor : pointer;
+}
+
+.cubo{
+    position: absolute;
+    background-color: black;
+    width: 50px;
+    height: 50px;
+    margin-top: 5%;
+}
+
+.video{
+    position: fixed;
+    height: 160px;
+    width: 280px;
+    bottom: 10px;
+    left: 10px;
+}
+
+.animated{
+    opacity: 1;
+    overflow: hidden;
+    transition: all 5s;
+}
+.animated.ng-hide{
+    opacity: 0;
+    max-height: 0px !important;
+    display: block !important;
+}
+
+.table,.tr,.th, .td {
+   border: 1px solid black;
+}
+
+.hover{
+    background-color: rgb(200,50,50);
+}
+
+.no-list li{
+    list-style-type: none;
+}
+
+.circular{
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<center>
+    <input type="text" my-autocomplete="repos" placeholder="Buscar Repositorio" width="100%">
+    <hr/>
+    <table class="table" ng-cloak>
+        <tr class="tr">
+            <th class="th">ID</th>
+            <th class="th">Name</th>
+            <th class="th">Full-Name</th>
+            <th class="th">Avatar Image</th>
+            <th class="th">Div</th>
+        </tr>
+        <tr class="tr" ng-repeat="repo in posts" ng-hide="main_repo && main_repo !== repo.name">
+            <td class="td">{{repo.id}}</td>
+            <td class="td"><a href="#!/repo/{{repo.name}}"><h1>{{repo.name}}</h1></a></td>
+            <td class="td">{{repo.full_name}}</td>
+            <td class="td"><img ng-src="{{repo.owner.avatar_url}}"></td>
+            <td class="td"><div class="circular" back-img="{{repo.owner.avatar_url}}"></div></td>
+        </tr>
+    </table>
+    <hr/>
+    <a ng-click="main_repo = null">Limpiar</a>
+</center>

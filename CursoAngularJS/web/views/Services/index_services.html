@@ -1,0 +1,32 @@
+
+<html ng-app="Services_app">
+    <head>
+        <title>Services</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../../css/estilos.css"/>
+        
+    </head>
+    <body ng-controller="ServicesController">
+        
+        <ul>
+            <li ng-repeat="actividad in todo">
+                {{actividad.descripcion}} - {{actividad.fecha | date: 'short'}} - 
+                <a href="#" ng-click="removeActv(actividad)" style="color: red">x</a>
+            </li>
+        </ul>
+        
+        <form ng-submit="addActv()">
+            <input type="text" ng-model="newActv.descripcion" id="actividad">
+            <input type="datetime-local" ng-model="newActv.fecha">
+            <input type="submit" value="Guardar Actividad">
+        </form>
+        <button ng-click="clean()">Limpiar</button>
+        
+        <script src="../../js/jquery.min.js"></script>
+        <script src="../../js/jquery.easing.1.3.js"></script>
+        <script src="../../js/angular.js"></script>
+        <script src="../../js/angular-local-storage.min.js"></script>
+        <script src="../../js/Services.js"></script>
+    </body>
+</html>
