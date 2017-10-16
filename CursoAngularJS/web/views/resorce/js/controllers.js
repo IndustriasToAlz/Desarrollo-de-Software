@@ -19,6 +19,6 @@ angular.module("FinalApp")
     };
 })
 .controller("PostController",function($scope,$resource,$routeParams){
-    //var Post = $resource("http://jsonplaceholder.typicode.com/posts/:id", {id: "@id"});
-    $scope.post = $resource("http://jsonplaceholder.typicode.com/posts/:id", {id: "@id"}).get({id:$routeParams.id});
+    var Post = $resource("http://jsonplaceholder.typicode.com/posts/:id", {id: "@id"});
+    $scope.post = Post.get({id:$routeParams.id});
 });
