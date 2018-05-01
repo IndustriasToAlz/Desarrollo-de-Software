@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Mi Primera applicacion</string>
+    <string name="saludo">Carlos Andres Oe!</string>
+    <string name="boton">Cambiar Dato</string>
+    <string name="boton3">Lanzar Cuadro</string>
+    <string name="boton4">Desplegar Nueva Actividad</string>
+</resources>

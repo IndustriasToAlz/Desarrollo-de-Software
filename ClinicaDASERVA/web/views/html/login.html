@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<form ng-submit="iniciarSesion()">
+    <div class="card top-space">
+        <div class="p+">
+            <h1>{{title}}</h1>
+            <div flex-container="row">
+                <div flex-item>
+                    <lx-text-field label="Login">
+                        <input type="text" ng-model="login.login"/>
+                    </lx-text-field>
+                </div>
+            </div>
+            <div flex-container="row">
+                <div flex-item>
+                    <lx-text-field label="Password">
+                        <input type="password" ng-model="login.password"/>
+                    </lx-text-field>
+                </div>
+            </div>
+        </div>
+        <label id="error"></label>
+        <div class="card__actions">
+            <button type="submit" class="btn btn--blue btn--l btn--raised">Ingresar</button>
+        </div>
+    </div>
+</form>

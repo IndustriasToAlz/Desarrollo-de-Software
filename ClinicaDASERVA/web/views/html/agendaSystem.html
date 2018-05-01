@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+
+<div class="tab">
+  <button class="tablinks" ng-click="openTab('AgCliente')">Por Cliente</button>
+  <button class="tablinks" ng-click="openTab('AgFecha')">Por Fecha</button>
+</div>
+
+<div id="AgCliente" class="tabcontent">
+    <div flex-container="row">
+        <div flex-item id="txtRut">
+            <lx-text-field label="RUT">
+                <input type="text" ng-model="cliente.rut"/>
+            </lx-text-field>
+        </div>
+    </div>
+    <table>
+        <tbody>
+            <tr>
+                <td colspan="3">
+                    <div flex-container="row">
+                        <div flex-item id="lblNombre">
+                            <lx-text-field label="Nombre">
+                                <input type="text" ng-model="cliente.nombre" disabled/>
+                            </lx-text-field>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td width="50%">
+                    <div flex-container="row">
+                        <div flex-item id="lblDireccion">
+                            <lx-text-field label="Direccion">
+                                <input type="text" ng-model="cliente.direccion" disabled/>
+                            </lx-text-field>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div flex-container="row">
+                        <div flex-item id="lblComuna">
+                            <lx-text-field label="Comuna">
+                                <input type="text" ng-model="cliente.comuna" disabled/>
+                            </lx-text-field>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div flex-container="row">
+                        <div flex-item id="lblTelParticular">
+                            <lx-text-field label="Telefono Particular">
+                                <input type="text" ng-model="cliente.telParticular" disabled/>
+                            </lx-text-field>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div flex-container="row">
+                        <div flex-item id="lblTelTrabajo">
+                            <lx-text-field label="Telefono Trabajo">
+                                <input type="text" ng-model="cliente.telTrabajo" disabled/>
+                            </lx-text-field>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div flex-container="row">
+                        <div flex-item id="lblTelMovil">
+                            <lx-text-field label="Telefono Movil">
+                                <input type="text" ng-model="cliente.telMovil" disabled/>
+                            </lx-text-field>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div flex-container="row">
+                        <div flex-item id="lblEmail">
+                            <lx-text-field label="Email">
+                                <input type="text" ng-model="cliente.email" disabled/>
+                            </lx-text-field>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div flex-container="row">
+                        <div flex-item id="lblFecNacimiento">
+                            <lx-text-field label="Fecha Nacimiento">
+                                <input type="text" ng-model="cliente.fecNacimiento" disabled/>
+                            </lx-text-field>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <hr/>
+    <div ng-show="bandera">
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        <input type="text" id="datepicker" placeholder="--Seleccione Fecha--"/> &nbsp;&nbsp
+                    </td>
+                    <td>
+                        <select id="cmbDoctores">
+                            <option value="">--Selecciona Profesional--</option>
+                            <option ng-repeat="option in listaDoctores" value="{{option.codigo}}">{{option.nombre}}</option>
+                        </select> &nbsp;&nbsp
+                    </td>
+                    <td>
+                        <button ng-click="disponibilidadCitas()">Consultar Disponibilidad De Citas</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div ng-show="banderaAgenda">
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        Hora
+                    </td>
+                    &nbsp;&nbsp
+                    <td>
+                        Agendar/Eliminar
+                    </td>
+                </tr>
+                <tr ng-repeat="horas in disponibilidadAgenda">
+                    <td ng-class="{'citaAgendada': horas.asignada === 1}">{{horas.hora}}</td>
+                    &nbsp;&nbsp
+                    <td><button ng-class="{'botonAgendar': horas.asignada === 0, 'botonEliminar': horas.asignada === 1}" ng-click="agendarCita(horas.hora,horas.asignada)">{{horas.asignada === 1 ? 'Eliminar' : 'Agendar'}}</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div ng-show="banderaMensaje">
+        <label id="lblMensaje">{{mensaje}}</label>
+    </div>
+</div>
+
+<div id="AgFecha" class="tabcontent">
+    <table>
+        <tbody>
+            <tr>
+                <th>
+                    Seleleccione Dia
+                </th>
+                <th>
+                    Seleccione Doctor
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" id="datepickerFecha" placeholder="--Seleccione Fecha--"/>
+                </td>
+                <td>
+                    <select id="cmbDoctoresFecha">
+                        <option value="">--Selecciona Profesional--</option>
+                        <option ng-repeat="option in listaDoctores" value="{{option.codigo}}">{{option.nombre}}</option>
+                    </select>
+                </td>
+                <td>
+                    <button ng-click="ConsultarCitas()">Consultar Citas</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

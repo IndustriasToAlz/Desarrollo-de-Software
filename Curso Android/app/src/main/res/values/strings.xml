@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">My First Application</string>
+    <string name="saludo">Carlos Andres Oe!</string>
+    <string name="boton">Change Data</string>
+    <string name="boton3">Launch Square</string>
+    <string name="boton4">Launch New Activity</string>
+</resources>

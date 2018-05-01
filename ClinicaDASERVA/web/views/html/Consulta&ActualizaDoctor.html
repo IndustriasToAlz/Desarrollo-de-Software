@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<center>
+    <form>
+        <table width="100%">
+            <tbody>
+                <tr>
+                    <th colspan="4">
+                        <h1>{{titulo}}</h1>
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        <div flex-container="row">
+                            <div flex-item id="txtRut">
+                                <lx-text-field label="RUT">
+                                    <input type="text" ng-model="doctor.rut"/>
+                                </lx-text-field>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div flex-container="row">
+                            <div flex-item id="txtRut">
+                                <lx-text-field label="Primer Nombre">
+                                    <input type="text" ng-model="doctor.primer_nombre"/>
+                                </lx-text-field>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div flex-container="row">
+                            <div flex-item id="txtRut">
+                                <lx-text-field label="Segundo Nombre">
+                                    <input type="text" ng-model="doctor.segundo_nombre"/>
+                                </lx-text-field>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div flex-container="row">
+                            <div flex-item id="txtRut">
+                                <lx-text-field label="Primer Apellido">
+                                    <input type="text" ng-model="doctor.primer_apellido"/>
+                                </lx-text-field>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div flex-container="row">
+                            <div flex-item id="txtRut">
+                                <lx-text-field label="Segundo Apellido">
+                                    <input type="text" ng-model="doctor.segundo_apellido"/>
+                                </lx-text-field>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div flex-container="row">
+                            <div flex-item>
+                                <lx-text-field label="Direccion Residencia">
+                                    <input type="text" ng-model="doctor.direccion"/>
+                                </lx-text-field>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div flex-container="row">
+                            <div flex-item>
+                                <lx-text-field label="Comuna">
+                                    <input type="text" ng-model="doctor.comuna"/>
+                                </lx-text-field>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div flex-container="row">
+                            <div flex-item>
+                                <lx-text-field label="Telefono Particular">
+                                    <input type="text" ng-model="doctor.tel_particular"/>
+                                </lx-text-field>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div flex-container="row">
+                            <div flex-item>
+                                <lx-text-field label="Telefono Trabajo">
+                                    <input type="text" ng-model="doctor.tel_trabajo"/>
+                                </lx-text-field>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div flex-container="row">
+                            <div flex-item>
+                                <lx-text-field label="Telefono Movil">
+                                    <input type="text" ng-model="doctor.tel_Movil"/>
+                                </lx-text-field>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div flex-container="row">
+                            <div flex-item>
+                                <lx-text-field label="E-Mail">
+                                    <input type="text" ng-model="doctor.email"/>
+                                </lx-text-field>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div flex-container="row">
+                            <div flex-item>
+                                <lx-text-field label="Fecha Nacimiento">
+                                    <input type="date" ng-model="doctor.fecha_nacimiento" id="dtpFecha_nacimiento"/>    
+                                </lx-text-field>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr ng-show="lbl_bandera">
+                    <td colspan="4" id="lblMensaje">
+                        <div class="card__actions" align="center">
+                            <label>{{validar}}</label>
+                        </div>
+                    </td>
+                </tr>
+                <tr ng-show="btn_bandera">
+                    <td colspan="4">
+                        <div class="card__actions" align="center">
+                            <button type="submit" class="btn btn--blue btn--l btn--raised" ng-click="cruCliente()">{{boton}}</button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</center>

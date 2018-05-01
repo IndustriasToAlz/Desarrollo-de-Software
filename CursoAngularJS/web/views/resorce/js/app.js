@@ -19,5 +19,9 @@ angular.module("FinalApp",["lumx","ngRoute","ngResource"])
            controller: "NewPostController",
            templateUrl: "templates/post_form.html" 
         })
+        .when("/login",{
+           controller: "loginController",
+           templateUrl: "templates/login.html" 
+        })
         .otherwise("/");
 });

@@ -38,4 +38,7 @@ angular.module("FinalApp")
             $location.path("/");
         });
     };
+})
+.controller("loginController",function($scope,PostResource,$location){
+
 });
