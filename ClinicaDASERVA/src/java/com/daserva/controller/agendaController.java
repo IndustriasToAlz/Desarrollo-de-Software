@@ -1,8 +1,9 @@
 
 package com.daserva.controller;
 
-import com.daserva.modelos.Cita;
-import com.daserva.modelos.DisponibilidadCita;
+import com.daserva.dao.agendaDAO;
+import com.daserva.dto.CitaDTO;
+import com.daserva.dto.DisponibilidadCitaDTO;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
@@ -26,10 +27,10 @@ public class agendaController{
         HttpServletRequest request = attr.getRequest();
         response.setContentType("application/json;charset=utf-8");
         
-        agendaControllerDatos ageDatos = new agendaControllerDatos();
+        agendaDAO ageDatos = new agendaDAO();
         PrintWriter pw = response.getWriter(); 
         
-        ArrayList<DisponibilidadCita> disponibilidad = ageDatos.getDisponibilidadDatos(Integer.parseInt(request.getParameter("cod_cliente")),Integer.parseInt(request.getParameter("cod_doctor")),request.getParameter("fecha"));
+        ArrayList<DisponibilidadCitaDTO> disponibilidad = ageDatos.getDisponibilidadDatos(Integer.parseInt(request.getParameter("cod_cliente")),Integer.parseInt(request.getParameter("cod_doctor")),request.getParameter("fecha"));
         
         JSONArray ja = new JSONArray(disponibilidad);
         
@@ -44,12 +45,12 @@ public class agendaController{
         HttpServletRequest request = attr.getRequest();
         response.setContentType("application/json;charset=utf-8");
         
-        agendaControllerDatos ageDatos = new agendaControllerDatos();
+        agendaDAO ageDatos = new agendaDAO();
         PrintWriter pw = response.getWriter(); 
         JSONObject json = null;        
         
-        Cita cita = new Cita();
-        agendaControllerDatos agendatos = new agendaControllerDatos();
+        CitaDTO cita = new CitaDTO();
+        agendaDAO agendatos = new agendaDAO();
         
         cita.setCodigoCliente(Integer.parseInt(request.getParameter("cod_cliente")));
         cita.setCodigoDoctor(Integer.parseInt(request.getParameter("cod_doctor")));
@@ -88,7 +89,7 @@ public class agendaController{
         HttpServletRequest request = attr.getRequest();
         response.setContentType("application/json;charset=utf-8");
         
-        agendaControllerDatos ageDatos = new agendaControllerDatos();
+        agendaDAO ageDatos = new agendaDAO();
         PrintWriter pw = response.getWriter(); 
         JSONObject json = null;
         

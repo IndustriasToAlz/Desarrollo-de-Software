@@ -1,0 +1,59 @@
+{
+  "project_info": {
+    "project_number": "1038266712797",
+    "firebase_url": "https://zappinc-541ea.firebaseio.com",
+    "project_id": "zappinc-541ea",
+    "storage_bucket": "zappinc-541ea.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1038266712797:android:e7398b1b199c6bc2",
+        "android_client_info": {
+          "package_name": "co.com.app.zappinc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1038266712797-g0rglsh8hi7rrm9ifj0qr978tjkfurea.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "co.com.app.zappinc",
+            "certificate_hash": "157af29bba99e4c2a2b5e33670b31707ac603dca"
+          }
+        },
+        {
+          "client_id": "1038266712797-fvbq31btvlvrorh1cvgrpfqnadr2ajm1.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "1038266712797-fvbq31btvlvrorh1cvgrpfqnadr2ajm1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBHJBSTobTLVvHGi3qPERn9b6uFraJrOiI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1038266712797-fvbq31btvlvrorh1cvgrpfqnadr2ajm1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

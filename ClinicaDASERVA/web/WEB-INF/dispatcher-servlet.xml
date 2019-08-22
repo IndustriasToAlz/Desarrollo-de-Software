@@ -8,43 +8,27 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
-
+    
     <bean class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping"/>
-
-    <!--
-    Most controllers will use the ControllerClassNameHandlerMapping above, but
-    for the index controller we are using ParameterizableViewController, so we must
-    define an explicit mapping for it.
-    -->
+    
     <bean id="urlMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
         <property name="mappings">
             <props>
                 <prop key="index.htm">indexController</prop>
-                <prop key="login.htm">loginController</prop>
-                <prop key="getCliente.htm">clientesController</prop>
-                <prop key="CRUCliente.htm">clientesController</prop>
-                <prop key="getDoctor.htm">doctorController</prop>
-                <prop key="CRUDoctor.htm">doctorController</prop>
-                <prop key="getDoctoresLista.htm">doctorController</prop>
-                <prop key="getDisponibilidad.htm">agendaController</prop>
-                <prop key="CRUDagenda.htm">agendaController</prop>
-                <prop key="validarAgendamiento.htm">agendaController</prop>
             </props>
         </property>
     </bean>
 
+    <context:component-scan base-package="com.daserva.controller"/>
+    
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <property name="maxUploadSize" value="10000000"/>
+    </bean>
+    
     <bean id="viewResolver"
           class="org.springframework.web.servlet.view.InternalResourceViewResolver"
           p:prefix="/"
           p:suffix=".jsp" />
-
-    <!--
-    The index controller.
-    -->
-    <bean name="loginController" class="com.daserva.controller.loginController" />
-    <bean name="clientesController" class="com.daserva.controller.clientesController" />
-    <bean name="doctorController" class="com.daserva.controller.doctorController" />
-    <bean name="agendaController" class="com.daserva.controller.agendaController" />
     
     <bean name="indexController"
           class="org.springframework.web.servlet.mvc.ParameterizableViewController"

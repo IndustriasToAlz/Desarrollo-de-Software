@@ -2,7 +2,7 @@
 package com.daserva.controller;
 
 import com.daserva.conexion.ConexionDB;
-import com.daserva.interfaces.IconsultasSQL;
+import com.daserva.sql.IconsultasSQL;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.CallableStatement;

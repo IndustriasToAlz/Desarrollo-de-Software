@@ -1,7 +1,8 @@
 
 package com.daserva.controller;
 
-import com.daserva.modelos.Doctor;
+import com.daserva.dao.doctorDAO;
+import com.daserva.dto.DoctorDTO;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
@@ -27,7 +28,7 @@ public class doctorController{
         HttpServletRequest request = attr.getRequest();
         response.setContentType("application/json;charset=utf-8");
         
-        doctorControllerDatos docDatos = new doctorControllerDatos();
+        doctorDAO docDatos = new doctorDAO();
         PrintWriter pw = response.getWriter(); 
         
         json = null;
@@ -40,10 +41,10 @@ public class doctorController{
             pw.print(json);
         }
 
-        ArrayList<Doctor> doctor = docDatos.getDoctorDatos(request.getParameter("rut"));
+        ArrayList<DoctorDTO> doctor = docDatos.getDoctorDatos(request.getParameter("rut"));
         
         if(!doctor.isEmpty()){
-            Doctor c = doctor.get(0);
+            DoctorDTO c = doctor.get(0);
             if(c != null){
                 json = new JSONObject( c );
                 json.put("Status", "OK");
@@ -65,10 +66,10 @@ public class doctorController{
         HttpServletRequest request = attr.getRequest();
         response.setContentType("application/json;charset=utf-8");
         
-        doctorControllerDatos docDatos = new doctorControllerDatos();
+        doctorDAO docDatos = new doctorDAO();
         PrintWriter pw = response.getWriter(); 
 
-        ArrayList<Doctor> doctor = docDatos.getDoctoresListaDatos();
+        ArrayList<DoctorDTO> doctor = docDatos.getDoctoresListaDatos();
         
         JSONArray ja = new JSONArray(doctor);
         
@@ -85,10 +86,10 @@ public class doctorController{
         
         json = null;
         
-        doctorControllerDatos docDatos = new doctorControllerDatos();
+        doctorDAO docDatos = new doctorDAO();
         PrintWriter pw = response.getWriter(); 
         
-        Doctor doctor = new Doctor();
+        DoctorDTO doctor = new DoctorDTO();
         
         doctor.setRut(request.getParameter("rut"));
         doctor.setPrimerNombre(request.getParameter("primer_nombre"));

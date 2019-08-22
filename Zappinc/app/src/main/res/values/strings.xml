@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Zappinc</string>
+    <string name="facebook_app_id">2204559006441338</string>
+    <string name="fb_login_protocol_scheme">fb2204559006441338</string>
+    <string name="cancel_login">Se ha cancelado el inicio de sesion.</string>
+    <string name="error_login">Se ha producido un error al iniciar sesion.</string>
+    <string name="error_login_google">No se pudo iniciar sesión.</string>
+</resources>

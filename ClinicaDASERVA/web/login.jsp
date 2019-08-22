@@ -42,7 +42,8 @@
         <script src="js/velocity.min.js"></script>
         <script src="js/moment-with-locales.min.js"></script>
         <script src="js/lumx.js"></script>
-        <script src="js/app/app.js"></script>
-        <script src="js/app/ControllerLogin.js"></script>
+        <script src="js/angular/app/appLogin.js"></script>
+        <script src="js/angular/service/serviceLogin.js"></script>
+        <script src="js/angular/controller/ControllerLogin.js"></script>
     </body>
 </html>

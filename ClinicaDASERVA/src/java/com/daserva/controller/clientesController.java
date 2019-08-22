@@ -1,7 +1,8 @@
 
 package com.daserva.controller;
 
-import com.daserva.modelos.Cliente;
+import com.daserva.dao.clientesDAO;
+import com.daserva.dto.ClienteDTO;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
@@ -27,7 +28,7 @@ public class clientesController{
         HttpServletRequest request = attr.getRequest();
         response.setContentType("application/json;charset=utf-8");
         
-        clientesControllerDatos cliDatos = new clientesControllerDatos();
+        clientesDAO cliDatos = new clientesDAO();
         PrintWriter pw = response.getWriter(); 
         
         json = null;
@@ -40,10 +41,10 @@ public class clientesController{
             pw.print(json);
         }
 
-        ArrayList<Cliente> clientes = cliDatos.getClienteDatos(request.getParameter("rut"));
+        ArrayList<ClienteDTO> clientes = cliDatos.getClienteDatos(request.getParameter("rut"));
         
         if(!clientes.isEmpty()){
-            Cliente c = clientes.get(0);
+            ClienteDTO c = clientes.get(0);
             if(c != null){
                 json = new JSONObject( c );
                 json.put("Status", "OK");
@@ -67,10 +68,10 @@ public class clientesController{
         
         json = null;
         
-        clientesControllerDatos cliDatos = new clientesControllerDatos();
+        clientesDAO cliDatos = new clientesDAO();
         PrintWriter pw = response.getWriter(); 
         
-        Cliente cliente = new Cliente();
+        ClienteDTO cliente = new ClienteDTO();
         
         cliente.setRut(request.getParameter("rut"));
         cliente.setPrimerNombre(request.getParameter("primer_nombre"));

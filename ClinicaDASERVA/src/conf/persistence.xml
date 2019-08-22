@@ -3,8 +3,8 @@
   <persistence-unit name="ClinicaDASERVAPU" transaction-type="JTA">
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
     <jta-data-source>java:app/MySql</jta-data-source>
-    <class>com.daserva.modelos.Doctor</class>
-    <class>com.daserva.modelos.Cita</class>
+    <class>com.daserva.dto.CitaDTO</class>
+    <class>com.daserva.dto.DoctorDTO</class>
     <exclude-unlisted-classes>false</exclude-unlisted-classes>
     <properties/>
   </persistence-unit>
